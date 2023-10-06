@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Pokevent Data Tool</title>
+</head>
+<body>
+   <nav class="nav-bar">
+       <h1>Pokevent Data Tool v0.1</h1>
+   </nav>
+   <section class="link-choice">
+    <h3 id="eventtext">Select type of event:</h3>
+    <form class="radio-buttons">
+      <label class="radio-container">
+        <input type="radio" id="default" name="selected-link" value="Default">
+        Default
+      </label>
+      <label class="radio-container">
+        <input type="radio" id="spotlightHour" name="selected-link" value="SpotlightHour">
+        Spotlight Hour
+      </label>
+      <label class="radio-container">
+        <input type="radio" id="communityDay" name="selected-link" value="CommunityDay">
+        Community Day
+      </label>
+      <label class="radio-container">
+        <input type="radio" id="t5Raid" name="selected-link" value="Tier5Raid">
+        Tier 5 Raid
+      </label>
+    </form>
+  </section>
+  
+  
+   <section class="link-submit">
+        <h3>Input Page Link:</h3>
+        <form>
+            <input type="text" id="submit-link" name="submit-link" placeholder="https://leekduck.com/example">
+            <br>
+            <input type="submit" value="Get Details">
+        </form> 
+   </section>
+</body>
+</html>
