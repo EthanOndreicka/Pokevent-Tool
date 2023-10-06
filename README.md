@@ -18,3 +18,6 @@ enter the link to the page. Once the information is scraped, all data is then in
 
 ### Author(s)
 - [@EthanOndreicka] (https://github.com/EthanOndreicka)
+
+
+##### This tool is still in very early development and is not fully operational | Started 10/5/2023
