@@ -14,7 +14,7 @@
    </nav>
    <section class="link-choice">
     <h3 id="eventtext">Select type of event:</h3>
-    <form class="radio-buttons">
+    <form class="radio-buttons, myForm">
       <label class="radio-container">
         <input type="radio" id="default" name="selected-link" value="Default">
         Default
@@ -41,8 +41,13 @@
             <input type="text" id="submit-link" name="submit-link" placeholder="https://leekduck.com/example">
             <br>
             <input type="submit" value="Get Details">
+            <br>
         </form> 
    </section>
+
+   <form action="embedPreview.html">
+    <button type="menu" class="preview-button">Preview Embed</button>
+   </form>
 
    <script>
     let submission = document.getElementById('submit-link');
