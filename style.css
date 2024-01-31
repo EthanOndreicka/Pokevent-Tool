@@ -28,6 +28,15 @@ body{
     align-items: center;
 }
 
+.nav-bar-3{
+    background-color: rgb(166, 119, 241);
+    width: 100vw;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .link-choice{
     padding-top: 10px;
     text-align: center;
@@ -72,7 +81,7 @@ input[type="submit"]{
     margin-top: 50px;
     border: none;
     height: 40px;
-    width: 150px;
+    width: 160px;
     border-radius: 10px;
     font-size: 20px;
     transition-duration: 0.4s;
@@ -101,6 +110,12 @@ input[type="submit"]:hover{
     padding: 5px;
 }
 
+.alternate-buttons{
+    position: relative;
+    left: 10px;
+    bottom: -55px;
+}
+
 .preview-button{
     margin-top: 10px;
     border: 15px;
@@ -119,6 +134,27 @@ input[type="submit"]:hover{
     color: black;
     cursor: pointer;
 }
+
+
+.raw-data-button{
+    margin-top: 10px;
+    border: 15px;
+    height: 35px;
+    width: 130px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    background-color: rgb(70, 80, 109);
+    border-color: rgb(255, 255, 255);
+    color: white;
+}
+
+.raw-data-button:hover{
+    background-color: rgb(202, 223, 250);
+    color: black;
+    cursor: pointer;
+}
+
 
 .card{
     position: relative;

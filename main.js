@@ -6,7 +6,8 @@ const path = require('path');
 app.on('ready', () => {
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 725,
+    height: 735,
+    resizeable: false,
     webPreferences: {
         nodeIntegration: true,
         contextIsolation: false
@@ -15,6 +16,9 @@ app.on('ready', () => {
     icon: path.join(__dirname, 'assets', 'icon.png'),
   });
 
+  mainWindow.on('will-resize', (event, newBounds) => {
+    event.preventDefault();
+  })
   mainWindow.loadFile('index.html'); // Load your HTML file here
 
   ipcMain.on('form-submission', (event, FormData) => {
