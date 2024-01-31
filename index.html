@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="renderer.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Pokevent Data Tool</title>
 </head>
@@ -32,15 +33,20 @@
       </label>
     </form>
   </section>
-
-
+  
+  
    <section class="link-submit">
         <h3>Input Page Link:</h3>
-        <form>
+        <form id="myForm">
             <input type="text" id="submit-link" name="submit-link" placeholder="https://leekduck.com/example">
             <br>
             <input type="submit" value="Get Details">
         </form> 
    </section>
+
+   <script>
+    let submission = document.getElementById('submit-link');
+    console.log(submission)
+   </script>
 </body>
 </html>

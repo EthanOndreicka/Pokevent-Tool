@@ -60,7 +60,6 @@ input[type="submit"]{
     width: 150px;
     border-radius: 10px;
     font-size: 20px;
-    color: gray;
     transition-duration: 0.4s;
 }
 
@@ -72,7 +71,6 @@ input[type="submit"]:hover{
 .radio-container {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid rgba(125, 157, 226, 0.253);
     padding: 5px;
     margin-bottom: 5px; /* Optional: Add spacing between radio options */
     border-radius: 5px;
