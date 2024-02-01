@@ -12,29 +12,35 @@ body{
 
 .nav-bar{
     background-color: rgb(40, 76, 143);
-    width: 100vw;
+    width: 110vw;
     height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    left: -50px;
 }
 
 .nav-bar-2{
     background-color: rgb(96, 210, 136);
-    width: 100vw;
+    width: 110vw;
     height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    left: -50px;
 }
 
 .nav-bar-3{
     background-color: rgb(166, 119, 241);
-    width: 100vw;
+    width: 110vw;
     height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    left: -50px;
 }
 
 .link-choice{
@@ -299,4 +305,12 @@ img{
     font-size: 20px;
     cursor: pointer;
     padding-top: 10px;
+}
+
+#rawDataTitleHeading{
+    font-size: 30px;
+}
+
+#rawDataDescription{
+    font-size: 20px;
 }

@@ -9,17 +9,42 @@
     <title>Pokevent Data Tool</title>
 </head>
 <body>
-   <nav class="nav-bar-3">
-       <h1>Raw Data Scraped</h1>
-   </nav>
+    <nav class="nav-bar-3">
+        <h1>Raw Data Scraped</h1>
+    </nav>
 
-   <form action="index.html">
-    <button type="menu" class="preview-button">Go Back</button>
-   </form>
+    <form action="index.html">
+        <button type="menu" class="preview-button">Go Back</button>
+    </form>
 
-   <script>
-    let submission = document.getElementById('submit-link');
-    console.log(submission)
-   </script>
+    <!-- Container for dynamically created h1 elements -->
+    <div id="dynamicDataContainer"></div>
+
+    <script>
+        const fs = require('fs').promises;
+        fs.readFile('event_details.json', 'utf8')
+            .then(data => {
+                const eventDetails = JSON.parse(data);
+
+                // Create h1 elements and append to the dynamicDataContainer
+                const dynamicDataContainer = document.getElementById('dynamicDataContainer');
+
+                // Title
+                const titleHeading = document.createElement('h1');
+                titleHeading.textContent = 'Title: ' + eventDetails.title;
+                titleHeading.id = 'rawDataTitleHeading';
+
+                // Description
+                const descriptionHeading = document.createElement('h1');
+                descriptionHeading.textContent = 'Description: ' + eventDetails.description.join(' ');
+                descriptionHeading.id = 'rawDataDescription';
+
+                dynamicDataContainer.appendChild(titleHeading);
+                dynamicDataContainer.appendChild(descriptionHeading);
+            })
+            .catch(err => {
+                console.error('Error reading event details: ', err);
+            });
+    </script>
 </body>
 </html>
