@@ -43,6 +43,17 @@ body{
     left: -50px;
 }
 
+.nav-bar-4{
+    background-color: rgb(241, 119, 164);
+    width: 110vw;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -50px;
+}
+
 .link-choice{
     padding-top: 10px;
     text-align: center;
@@ -119,7 +130,31 @@ input[type="submit"]:hover{
 .alternate-buttons{
     position: relative;
     left: 10px;
-    bottom: -55px;
+    bottom: -95px;
+}
+
+.sendButton{
+    position: relative;
+    left: 630px;
+    bottom: -45px;
+}
+
+.send-button{
+    margin-top: 10px;
+    border: 15px;
+    height: 35px;
+    width: 130px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    background-color: rgb(241, 119, 164);
+    border-color: rgb(255, 255, 255);
+    color: white;
+}
+.send-button:hover{
+    background-color: rgb(151, 71, 101);
+    color: white;
+    cursor: pointer;
 }
 
 .preview-button{
@@ -130,14 +165,14 @@ input[type="submit"]:hover{
     border-radius: 10px;
     font-size: 15px;
     transition-duration: 0.4s;
-    background-color: rgb(70, 80, 109);
+    background-color: rgb(96, 210, 136);
     border-color: rgb(255, 255, 255);
     color: white;
 }
 
 .preview-button:hover{
-    background-color: rgb(202, 223, 250);
-    color: black;
+    background-color: rgb(50, 107, 70);
+    color: white;
     cursor: pointer;
 }
 
@@ -150,14 +185,14 @@ input[type="submit"]:hover{
     border-radius: 10px;
     font-size: 15px;
     transition-duration: 0.4s;
-    background-color: rgb(70, 80, 109);
+    background-color: rgb(166, 119, 241);
     border-color: rgb(255, 255, 255);
     color: white;
 }
 
 .raw-data-button:hover{
-    background-color: rgb(202, 223, 250);
-    color: black;
+    background-color: rgb(98, 70, 145);
+    color: white;
     cursor: pointer;
 }
 
@@ -289,7 +324,7 @@ a{
 img{
     position: relative;
     left: 320px;
-    bottom: 360px;
+    bottom: 410px;
     vertical-align: middle;
     border-style: none;
     overflow-clip-margin: content-box;
@@ -313,4 +348,15 @@ img{
 
 #rawDataDescription{
     font-size: 20px;
+}
+
+#dynamicEmbedTitle{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#dynamicEmbedDescription{
+    font-size: 15px;
+    max-width: 300px;
+    padding-bottom: 15px;
 }

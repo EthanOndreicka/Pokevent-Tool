@@ -24,8 +24,8 @@
                             <div class="embed-author">
                                 <a class="embed-author-name" href>Pokevent</a>
                             </div>
-                            <div class="embed-title" id="rawDataTitleHeading"></div>
-                            <div class="embed-description" id="rawDataDescription"></div>
+                            <div class="embed-title" id="dynamicEmbedTitle"></div>
+                            <div class="embed-description" id="dynamicEmbedDescription"></div>
                             <div class="fields">
                                 <div class="field inline">
                                     <div class="field-name">Start Date</div>
@@ -67,9 +67,9 @@
             .then(data => {
                 const eventDetails = JSON.parse(data);
 
-                // Replace content inside the elements with the 'embed-title' and 'embed-description' classes
-                document.getElementById('rawDataTitleHeading').textContent = eventDetails.title;
-                document.getElementById('rawDataDescription').textContent = eventDetails.description.join(' ');
+                // Replace content inside the elements with the 'dynamicEmbedTitle' and 'dynamicEmbedDescription' IDs
+                document.getElementById('dynamicEmbedTitle').textContent = eventDetails.title;
+                document.getElementById('dynamicEmbedDescription').textContent = eventDetails.description.join(' ');
             })
             .catch(err => {
                 console.error('Error reading event details: ', err);
