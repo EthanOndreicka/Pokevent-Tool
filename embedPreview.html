@@ -24,10 +24,8 @@
                             <div class="embed-author">
                                 <a class="embed-author-name" href>Pokevent</a>
                             </div>
-                            <div class="embed-title">Chansey Community Day</div>
-                            <div class="embed-description">
-                                <p>Lots of Chansey Spawns</p>
-                            </div>
+                            <div class="embed-title" id="rawDataTitleHeading"></div>
+                            <div class="embed-description" id="rawDataDescription"></div>
                             <div class="fields">
                                 <div class="field inline">
                                     <div class="field-name">Start Date</div>
@@ -59,15 +57,23 @@
         </div>
    </div>
 
-
-
    <form action="index.html">
     <button type="menu" class="preview-button">Go Back</button>
    </form>
 
    <script>
-    let submission = document.getElementById('submit-link');
-    console.log(submission)
+        const fs = require('fs').promises;
+        fs.readFile('event_details.json', 'utf8')
+            .then(data => {
+                const eventDetails = JSON.parse(data);
+
+                // Replace content inside the elements with the 'embed-title' and 'embed-description' classes
+                document.getElementById('rawDataTitleHeading').textContent = eventDetails.title;
+                document.getElementById('rawDataDescription').textContent = eventDetails.description.join(' ');
+            })
+            .catch(err => {
+                console.error('Error reading event details: ', err);
+            });
    </script>
 </body>
 </html>
