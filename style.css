@@ -313,7 +313,7 @@ a{
 
 .embed img.embed-thumb{
     max-height: 160px;
-    max-width: 160px;
+    max-width: 130px;
     border-radius: 3px;
     flex-shrink: 0;
     width: auto;
@@ -327,7 +327,6 @@ img{
     bottom: 410px;
     vertical-align: middle;
     border-style: none;
-    overflow-clip-margin: content-box;
     overflow: clip;
 }
 
@@ -359,4 +358,15 @@ img{
     font-size: 15px;
     max-width: 300px;
     padding-bottom: 15px;
+}
+
+#dynamicStartDate{
+    padding-top: 60px;
+    max-width: 150px;
+    padding-bottom: 20px;
+}
+
+#dynamicEndDate{
+    padding-top: 60px;
+    max-width: 150px;
 }

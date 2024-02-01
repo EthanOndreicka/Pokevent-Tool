@@ -29,15 +29,11 @@
                             <div class="fields">
                                 <div class="field inline">
                                     <div class="field-name">Start Date</div>
-                                    <div class="field-value">
-                                        <p>July 1st</p>
-                                    </div>
+                                    <div class="field-value" id="dynamicStartDate"></div>
                                 </div>
                                 <div class="field false">
                                     <div class="field-name">End Date</div>
-                                    <div class="field-value">
-                                        <p>July 2nd</p>
-                                    </div>
+                                    <div class="field-value" id="dynamicEndDate"></div>
                                 </div>
                                 <div class="field false">
                                     <div class="field-name">Start Time</div>
@@ -47,7 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img class="embed-thumb" src="https://lh3.googleusercontent.com/6hDEpuTC9zI0DbXl1hDNOc87tpC31AlBpfsmkFmd59nZepS5LfCVeG0CRLyItgq9U6VDF-CKC8kDw9FEUR0NdLag8K1Qxb818Uc6FZs9QuAx=s0" style="height: 125px;">
+                        <img class="embed-thumb" src="https://leekduck.com/assets/img/events/cd-2024-02-chansey.jpg" style="height: 125px;">
                     </div>
                     <div class="embed-footer">
                         <span>(All Dates and times are local)</span>
@@ -67,9 +63,11 @@
             .then(data => {
                 const eventDetails = JSON.parse(data);
 
-                // Replace content inside the elements with the 'dynamicEmbedTitle' and 'dynamicEmbedDescription' IDs
+                // Replace content inside the elements 
                 document.getElementById('dynamicEmbedTitle').textContent = eventDetails.title;
                 document.getElementById('dynamicEmbedDescription').textContent = eventDetails.description.join(' ');
+                document.getElementById('dynamicStartDate').textContent = eventDetails.starting;
+                document.getElementById('dynamicEndDate').textContent = eventDetails.ending;
             })
             .catch(err => {
                 console.error('Error reading event details: ', err);
