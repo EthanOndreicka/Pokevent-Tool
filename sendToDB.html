@@ -39,8 +39,26 @@
                 descriptionHeading.textContent = 'Description: ' + eventDetails.description.join(' ');
                 descriptionHeading.id = 'rawDataDescription';
 
+                // Start Date
+                const startDate = document.createElement('h1');
+                startDate.textContent = 'Start Date: ' + eventDetails.starting
+                startDate.id = 'rawDataDescription';
+
+                // Description
+                const endDate = document.createElement('h1');
+                endDate.textContent = 'End Date: ' + eventDetails.ending;
+                endDate.id = 'rawDataDescription';
+
+                // Start Date
+                const startTime = document.createElement('h1');
+                startTime.textContent = 'Start Date: ' + eventDetails.startingTime
+                startTime.id = 'rawDataDescription';
+
                 dynamicDataContainer.appendChild(titleHeading);
                 dynamicDataContainer.appendChild(descriptionHeading);
+                dynamicDataContainer.appendChild(startDate);
+                dynamicDataContainer.appendChild(endDate);
+                dynamicDataContainer.appendChild(startTime);
             })
             .catch(err => {
                 console.error('Error reading event details: ', err);

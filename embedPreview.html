@@ -37,9 +37,7 @@
                                 </div>
                                 <div class="field false">
                                     <div class="field-name">Start Time</div>
-                                    <div class="field-value">
-                                        <p>10am</p>
-                                    </div>
+                                    <div class="field-value" id="dynamicStartTime"></div>
                                 </div>
                             </div>
                         </div>
@@ -68,6 +66,7 @@
                 document.getElementById('dynamicEmbedDescription').textContent = eventDetails.description.join(' ');
                 document.getElementById('dynamicStartDate').textContent = eventDetails.starting;
                 document.getElementById('dynamicEndDate').textContent = eventDetails.ending;
+                document.getElementById('dynamicStartTime').textContent = eventDetails.startingTime;
             })
             .catch(err => {
                 console.error('Error reading event details: ', err);

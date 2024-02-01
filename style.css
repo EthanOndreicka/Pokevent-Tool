@@ -322,9 +322,9 @@ a{
 }
 
 img{
-    position: relative;
-    left: 320px;
-    bottom: 410px;
+    position: sticky;
+    left: 430px;
+    bottom: 950px;
     vertical-align: middle;
     border-style: none;
     overflow: clip;
@@ -352,21 +352,34 @@ img{
 #dynamicEmbedTitle{
     font-size: 20px;
     padding-bottom: 10px;
+    max-width: 15ch;
 }
 
 #dynamicEmbedDescription{
     font-size: 15px;
-    max-width: 300px;
+    max-width: 27ch;
     padding-bottom: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #dynamicStartDate{
     padding-top: 60px;
-    max-width: 150px;
+    max-width: 130px;
     padding-bottom: 20px;
 }
 
 #dynamicEndDate{
     padding-top: 60px;
+    max-width: 130px;
+}
+
+#dynamicStartTime{
+    padding-top: 60px;
     max-width: 150px;
+}
+
+.field{
+    padding-top: 25px;
 }
