@@ -54,11 +54,17 @@
                 startTime.textContent = 'Start Date: ' + eventDetails.startingTime
                 startTime.id = 'rawDataDescription';
 
+                // Image URL
+                const image = document.createElement('h1');
+                image.src = 'Image: ' + eventDetails.imageURL;
+                image.id = 'rawDataDescription';
+
                 dynamicDataContainer.appendChild(titleHeading);
                 dynamicDataContainer.appendChild(descriptionHeading);
                 dynamicDataContainer.appendChild(startDate);
                 dynamicDataContainer.appendChild(endDate);
                 dynamicDataContainer.appendChild(startTime);
+                dynamicDataContainer.appendChild(image);
             })
             .catch(err => {
                 console.error('Error reading event details: ', err);

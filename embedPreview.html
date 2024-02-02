@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img class="embed-thumb" src="https://leekduck.com/assets/img/events/cd-2024-02-chansey.jpg" style="height: 125px;">
+                        <img class="embed-thumb" id="dynamicImageURL" style="height: 125px;">
                     </div>
                     <div class="embed-footer">
                         <span>(All Dates and times are local)</span>
@@ -58,9 +58,17 @@
    <h3 id="rgbOutput">RGB Value: 0, 0, 0</h3>
    <h3 id="hexOutput">Hex Value: #000000</h3>
 
-   <form action="index.html">
-    <button type="menu" class="preview-button">Go Back</button>
-   </form>
+   <div class="new-preview-buttons">
+    <form action="index.html">
+        <button type="menu" class="preview-button-back">Go Back</button>
+       </form>
+    
+       <div class="sendButton-on-preview">
+        <form action="sendToDB.html">
+          <button type="menu" class="send-button-back">Send Data to Database</button>
+        </form>
+       </div>
+   </div>
 
    <script>
         const fs = require('fs').promises;
@@ -74,6 +82,7 @@
                 document.getElementById('dynamicStartDate').textContent = eventDetails.starting;
                 document.getElementById('dynamicEndDate').textContent = eventDetails.ending;
                 document.getElementById('dynamicStartTime').textContent = eventDetails.startingTime;
+                document.getElementById('dynamicImageURL').src = eventDetails.imageURL;
             })
             .catch(err => {
                 console.error('Error reading event details: ', err);
