@@ -14,7 +14,7 @@
    </nav>
    <section class="link-choice">
     <h3 id="eventtext">Select type of event:</h3>
-    <form class="radio-buttons, myForm">
+    <form class="radio-buttons, myForm" id="eventForm">
       <label class="radio-container">
         <input type="radio" id="default" name="selected-link" value="Default">
         Default
@@ -34,13 +34,12 @@
     </form>
   </section>
   
-  
    <section class="link-submit">
         <h3>Input Page Link:</h3>
         <form id="myForm">
             <input type="text" id="submit-link" name="submit-link" placeholder="https://leekduck.com/example">
             <br>
-            <input type="submit" value="Scrape Webpage">
+            <input type="submit" value="Scrape Webpage" id="submitButton" disabled>
             <br>
         </form> 
    </section>
@@ -59,8 +58,21 @@
    </div>
 
    <script>
+    let eventForm = document.getElementById('eventForm');
     let submission = document.getElementById('submit-link');
-    console.log(submission)
+    let submitButton = document.getElementById('submitButton');
+
+    eventForm.addEventListener('change', updateSubmitButton);
+    submission.addEventListener('input', updateSubmitButton);
+
+    function updateSubmitButton() {
+      let selectedEvent = document.querySelector('input[name="selected-link"]:checked');
+      if (selectedEvent && submission.value.trim() !== '') {
+        submitButton.disabled = false;
+      } else {
+        submitButton.disabled = true;
+      }
+    }
    </script>
 </body>
 </html>
