@@ -67,22 +67,30 @@
                 image.id = 'rawDataDescription';
 
                 // Embed Color Value
+                let colorValue;  // Declare colorValue outside the event listener
                 document.addEventListener("DOMContentLoaded", function () {
                     const queryString = window.location.search;
                     const urlParams = new URLSearchParams(queryString);
-                    const colorValue = urlParams.get("colorValue");
+                    colorValue = urlParams.get("colorValue");  // Assign value to colorValue
+                    colorValue.id = 'rawDataDescription';
 
                     // Use the colorValue as needed
                     console.log("Color Value from URL:", colorValue);
                 });
 
+                // Create h1 element for colorValue and append to dynamicDataContainer
+                const colorValueHeading = document.createElement('h1');
+                colorValueHeading.textContent = 'Color Value: ' + colorValue;
+                colorValueHeading.id = 'rawDataColorValue';
+
+                
+                dynamicDataContainer.appendChild(colorValueHeading);
                 dynamicDataContainer.appendChild(titleHeading);
                 dynamicDataContainer.appendChild(descriptionHeading);
                 dynamicDataContainer.appendChild(startDate);
                 dynamicDataContainer.appendChild(endDate);
                 dynamicDataContainer.appendChild(startTime);
                 dynamicDataContainer.appendChild(image);
-                dynamicDataContainer.appendChild(colorValue);
 
                 // Enable/disable submit button based on checkbox
                 const confirmationCheckbox = document.getElementById('confirmationCheckbox');
