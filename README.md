@@ -18,6 +18,10 @@ enter the link to the page. Once the information is scraped, all data is then in
 - AWS RDS
 
 
+### Tool Homescreen
+<img width="799" alt="Screenshot 2024-02-03 at 8 19 28 PM" src="https://github.com/EthanOndreicka/Pokevent-Tool/assets/97995036/7a990f76-045c-42ba-9c09-20328a06dcdd">
+
+
 ### Authors
 
 - [@EthanOndreicka](https://github.com/EthanOndreicka)
