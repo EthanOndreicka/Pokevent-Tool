@@ -176,6 +176,44 @@ input[type="submit"]:hover{
     cursor: pointer;
 }
 
+.preview-button-back{
+    margin-top: 10px;
+    border: 15px;
+    height: 35px;
+    width: 130px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    background-color: rgb(96, 210, 136);
+    border-color: rgb(255, 255, 255);
+    color: white;
+}
+
+.preview-button-back:hover{
+    background-color: rgb(50, 107, 70);
+    color: white;
+    cursor: pointer;
+}
+
+.send-button-back{
+    margin-top: 10px;
+    border: 15px;
+    height: 35px;
+    width: 130px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    background-color: rgb(241, 119, 164);
+    border-color: rgb(255, 255, 255);
+    color: white;
+}
+
+.send-button-back:hover{
+    background-color: rgb(151, 71, 101);
+    color: white;
+    cursor: pointer;
+}
+
 
 .raw-data-button{
     margin-top: 10px;
@@ -382,5 +420,21 @@ img{
 
 .field{
     padding-top: 25px;
+}
+
+.output-and-buttons-container {
+    display: flex;
+    align-items: center; /* Align items to the center */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.output-container {
+    margin-right: 20px; /* Adjust the margin between RGB output and buttons */
+}
+
+/* Style for the buttons */
+.preview-button-back,
+.send-button-back {
+    margin-top: 5px; /* Adjust the margin between buttons */
 }
 

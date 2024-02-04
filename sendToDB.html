@@ -20,6 +20,13 @@
     <!-- Container for dynamically created h1 elements -->
     <div id="dynamicDataContainer"></div>
 
+
+    <form class="submitValidation">
+        <input type="checkbox" id="confirmationCheckbox" name="confirmationCheckbox" value="confirmationCheckbox">
+        <label for="confirmationCheckbox">I have thoroughly read the contents of the scraped data and am prepared to send it to my database</label>
+        <input type="submit" value="Send to DB" id="submitDBButton" disabled>
+    </form>
+
     <script>
         const fs = require('fs').promises;
         fs.readFile('event_details.json', 'utf8')
@@ -59,12 +66,32 @@
                 image.src = 'Image: ' + eventDetails.imageURL;
                 image.id = 'rawDataDescription';
 
+                // Embed Color Value
+                document.addEventListener("DOMContentLoaded", function () {
+                    const queryString = window.location.search;
+                    const urlParams = new URLSearchParams(queryString);
+                    const colorValue = urlParams.get("colorValue");
+
+                    // Use the colorValue as needed
+                    console.log("Color Value from URL:", colorValue);
+                });
+
                 dynamicDataContainer.appendChild(titleHeading);
                 dynamicDataContainer.appendChild(descriptionHeading);
                 dynamicDataContainer.appendChild(startDate);
                 dynamicDataContainer.appendChild(endDate);
                 dynamicDataContainer.appendChild(startTime);
                 dynamicDataContainer.appendChild(image);
+                dynamicDataContainer.appendChild(colorValue);
+
+                // Enable/disable submit button based on checkbox
+                const confirmationCheckbox = document.getElementById('confirmationCheckbox');
+                const submitDBButton = document.getElementById('submitDBButton');
+
+                confirmationCheckbox.addEventListener('change', () => {
+                    submitDBButton.disabled = !confirmationCheckbox.checked;
+                });
+
             })
             .catch(err => {
                 console.error('Error reading event details: ', err);
