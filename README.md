@@ -1,6 +1,6 @@
 # Pokevent-Tool
 
-This tool is used to scrape webpages for my discord bot.
+This tool is used to scrape webpages for my Pokévent discord bot.
 
 ## How it works
 
