@@ -89,6 +89,18 @@ body{
     padding-left: 20px;
 }
 
+#submitButton:hover{
+    color: black;
+    background-color: rgb(97, 129, 193);
+    cursor: pointer;
+}
+
+#submitButton:hover:disabled{
+    color: rgb(72, 71, 71);
+    background-color: #5f5e5e;
+    cursor: default;
+}
+
 
 input::placeholder{
     opacity: 0.7;
@@ -104,15 +116,15 @@ input[type="submit"]{
     transition-duration: 0.4s;
 }
 
-input[type="submit"]:hover:disabled{
+#submitDBButton:hover:disabled{
     color: rgb(72, 71, 71);
     background-color: #5f5e5e;
     cursor: default;
 }
 
-input[type="submit"]:hover{
-    color: black;
-    background-color: rgb(97, 129, 193);
+#submitDBButton:hover{
+    color: white;
+    background-color: rgb(241, 119, 164);
     cursor: pointer;
 }
 
