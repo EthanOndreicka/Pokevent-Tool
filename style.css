@@ -55,7 +55,7 @@ body{
 }
 
 .link-choice{
-    padding-top: 10px;
+    padding-top: 40px;
     text-align: center;
     font-size: 20px;
 }
@@ -72,7 +72,7 @@ body{
 
 
 .link-submit{
-    padding-top: 10px;
+    padding-top: 50px;
     text-align: center;
 }
 
@@ -104,6 +104,12 @@ input[type="submit"]{
     transition-duration: 0.4s;
 }
 
+input[type="submit"]:hover:disabled{
+    color: rgb(72, 71, 71);
+    background-color: #5f5e5e;
+    cursor: default;
+}
+
 input[type="submit"]:hover{
     color: black;
     background-color: rgb(97, 129, 193);
@@ -111,19 +117,16 @@ input[type="submit"]:hover{
 }
 
 .radio-container {
-    display: flex;
-    flex-wrap: wrap;
     padding: 5px;
+    display: inline-block;
     margin-bottom: 5px; /* Optional: Add spacing between radio options */
     border-radius: 5px;
 }
   
-  .radio-container input[type="radio"] {
-    margin-right: 5px; /* Optional: Add spacing between radio button and label */
-}
 
-.radio-container input[type="radio"]:checked + label {
-    border: 1px solid rgb(255, 255, 255);
+
+.radio-container input[type="radio"]:checked {
+    border: 20px solid rgb(255, 255, 255);
     padding: 5px;
 }
 
@@ -438,3 +441,47 @@ img{
     margin-top: 5px; /* Adjust the margin between buttons */
 }
 
+footer{
+    display:flex;
+    background-color: rgb(33, 56, 88);
+    height: 25px;
+    width: 100%;
+    border-top: 2px solid rgb(21, 37, 58);
+    justify-content:center;
+    align-items:center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.tooltip {
+    padding-top: 10px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgb(90, 99, 114);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 13px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 5;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .tooltip:hover{
+    color: gray;
+  }

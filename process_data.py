@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 # Retrieve data from command line arguments
 data = sys.argv[1]
 
-# Process the data (you can replace this with your logic)
 print("Received data from Electron app:")
 print(data)
 
